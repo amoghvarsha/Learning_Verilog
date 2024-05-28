@@ -1,3 +1,8 @@
+
+/* 
+    URL: https://hdlbits.01xz.net/wiki/Wire
+*/
+
 module top_module 
 ( 
     input in, 
