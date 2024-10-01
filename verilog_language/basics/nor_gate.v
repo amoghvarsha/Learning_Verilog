@@ -3,6 +3,9 @@
     URL: https://hdlbits.01xz.net/wiki/Norgate
 */
 
+`define METHOD_A
+
+
 module top_module
 ( 
     input a, 
@@ -10,8 +13,14 @@ module top_module
     output out
 );
 
+    `ifdef METHOD_A
+
     assign out = ~ ( a | b);
 
-    // assign out = a ~| b;
+    `elsif METHOD_B
+    
+    assign out = a ~| b;
+
+    `endif
 
 endmodule
